@@ -50,7 +50,6 @@ public class ContactInfoController {
 	 */
 	@RequestMapping(value = "submit", method = RequestMethod.POST)
 	public String handleSubmitButton(@ModelAttribute("contact") Contact c, RedirectAttributes attributes) {
-		System.out.println("ContactInfoController.handleSubmitButton()");
 		boolean saveContact = contactService.saveContact(c);
 		if (saveContact == true) {
 			attributes.addFlashAttribute("succesMsg", "Contact Saved");
