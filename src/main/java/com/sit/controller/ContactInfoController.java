@@ -53,7 +53,7 @@ public class ContactInfoController {
 		System.out.println("ContactInfoController.handleSubmitButton()");
 		boolean saveContact = contactService.saveContact(c);
 		if (saveContact == true) {
-			// model.addAttribute("succesMsg", "Contact Saved");
+			System.out.println("ContactInfoController.handleSubmitButton()");
 			attributes.addFlashAttribute("succesMsg", "Contact Saved");
 		} else {
 			// model.addAttribute("failedMsg", "Contact Not Saved");
